@@ -1,0 +1,39 @@
+<h1>Listing orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Order date</th>
+      <th>Autoship</th>
+      <th>Send styleguide</th>
+      <th>Shipping type</th>
+      <th>Special instructions</th>
+      <th>Stylist</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.client_id %></td>
+        <td><%= order.order_date %></td>
+        <td><%= order.autoship %></td>
+        <td><%= order.send_styleguide %></td>
+        <td><%= order.shipping_type %></td>
+        <td><%= order.special_instructions %></td>
+        <td><%= order.stylist_id %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>

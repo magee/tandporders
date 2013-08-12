@@ -1,0 +1,144 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @client.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @client.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @client.email %>
+</p>
+
+<p>
+  <strong>Address ship:</strong>
+  <%= @client.address_ship %>
+</p>
+
+<p>
+  <strong>Address city:</strong>
+  <%= @client.address_city %>
+</p>
+
+<p>
+  <strong>Address state:</strong>
+  <%= @client.address_state %>
+</p>
+
+<p>
+  <strong>Address zip:</strong>
+  <%= @client.address_zip %>
+</p>
+
+<p>
+  <strong>Birthday:</strong>
+  <%= @client.birthday %>
+</p>
+
+<p>
+  <strong>Username skype:</strong>
+  <%= @client.username_skype %>
+</p>
+
+<p>
+  <strong>Stylist:</strong>
+  <%= @client.stylist_id %>
+</p>
+
+<p>
+  <strong>Pinterest board:</strong>
+  <%= @client.pinterest_board %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @client.budget %>
+</p>
+
+<p>
+  <strong>Spend tops:</strong>
+  <%= @client.spend_tops %>
+</p>
+
+<p>
+  <strong>Spend pants:</strong>
+  <%= @client.spend_pants %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @client.height %>
+</p>
+
+<p>
+  <strong>Bust:</strong>
+  <%= @client.bust %>
+</p>
+
+<p>
+  <strong>Waist natural:</strong>
+  <%= @client.waist_natural %>
+</p>
+
+<p>
+  <strong>Hips:</strong>
+  <%= @client.hips %>
+</p>
+
+<p>
+  <strong>Size top:</strong>
+  <%= @client.size_top %>
+</p>
+
+<p>
+  <strong>Size pant:</strong>
+  <%= @client.size_pant %>
+</p>
+
+<p>
+  <strong>Size shoe:</strong>
+  <%= @client.size_shoe %>
+</p>
+
+<p>
+  <strong>Style icon:</strong>
+  <%= @client.style_icon_id %>
+</p>
+
+<p>
+  <strong>Style icon other:</strong>
+  <%= @client.style_icon_other %>
+</p>
+
+<p>
+  <strong>Other info:</strong>
+  <%= @client.other_info %>
+</p>
+
+<p>
+  <strong>Referral source:</strong>
+  <%= @client.referral_source %>
+</p>
+
+<p>
+  <strong>Avoid:</strong>
+  <%= @client.avoid %>
+</p>
+
+<p>
+  <strong>Shape:</strong>
+  <%= @client.shape %>
+</p>
+
+<p>
+  <strong>Referred by:</strong>
+  <%= @client.referred_by %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

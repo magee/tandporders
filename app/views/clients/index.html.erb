@@ -1,0 +1,81 @@
+<h1>Listing clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Address ship</th>
+      <th>Address city</th>
+      <th>Address state</th>
+      <th>Address zip</th>
+      <th>Birthday</th>
+      <th>Username skype</th>
+      <th>Stylist</th>
+      <th>Pinterest board</th>
+      <th>Budget</th>
+      <th>Spend tops</th>
+      <th>Spend pants</th>
+      <th>Height</th>
+      <th>Bust</th>
+      <th>Waist natural</th>
+      <th>Hips</th>
+      <th>Size top</th>
+      <th>Size pant</th>
+      <th>Size shoe</th>
+      <th>Style icon</th>
+      <th>Style icon other</th>
+      <th>Other info</th>
+      <th>Referral source</th>
+      <th>Avoid</th>
+      <th>Shape</th>
+      <th>Referred by</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.first_name %></td>
+        <td><%= client.last_name %></td>
+        <td><%= client.email %></td>
+        <td><%= client.address_ship %></td>
+        <td><%= client.address_city %></td>
+        <td><%= client.address_state %></td>
+        <td><%= client.address_zip %></td>
+        <td><%= client.birthday %></td>
+        <td><%= client.username_skype %></td>
+        <td><%= client.stylist_id %></td>
+        <td><%= client.pinterest_board %></td>
+        <td><%= client.budget %></td>
+        <td><%= client.spend_tops %></td>
+        <td><%= client.spend_pants %></td>
+        <td><%= client.height %></td>
+        <td><%= client.bust %></td>
+        <td><%= client.waist_natural %></td>
+        <td><%= client.hips %></td>
+        <td><%= client.size_top %></td>
+        <td><%= client.size_pant %></td>
+        <td><%= client.size_shoe %></td>
+        <td><%= client.style_icon_id %></td>
+        <td><%= client.style_icon_other %></td>
+        <td><%= client.other_info %></td>
+        <td><%= client.referral_source %></td>
+        <td><%= client.avoid %></td>
+        <td><%= client.shape %></td>
+        <td><%= client.referred_by %></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client', new_client_path %>

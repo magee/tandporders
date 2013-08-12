@@ -1,0 +1,35 @@
+<h1>Listing consults</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stylist</th>
+      <th>Client</th>
+      <th>Consult date</th>
+      <th>Order</th>
+      <th>State</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @consults.each do |consult| %>
+      <tr>
+        <td><%= consult.stylist_id %></td>
+        <td><%= consult.client_id %></td>
+        <td><%= consult.consult_date %></td>
+        <td><%= consult.order_id %></td>
+        <td><%= consult.state %></td>
+        <td><%= link_to 'Show', consult %></td>
+        <td><%= link_to 'Edit', edit_consult_path(consult) %></td>
+        <td><%= link_to 'Destroy', consult, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Consult', new_consult_path %>

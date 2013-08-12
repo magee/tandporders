@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @order.client_id %>
+</p>
+
+<p>
+  <strong>Order date:</strong>
+  <%= @order.order_date %>
+</p>
+
+<p>
+  <strong>Autoship:</strong>
+  <%= @order.autoship %>
+</p>
+
+<p>
+  <strong>Send styleguide:</strong>
+  <%= @order.send_styleguide %>
+</p>
+
+<p>
+  <strong>Shipping type:</strong>
+  <%= @order.shipping_type %>
+</p>
+
+<p>
+  <strong>Special instructions:</strong>
+  <%= @order.special_instructions %>
+</p>
+
+<p>
+  <strong>Stylist:</strong>
+  <%= @order.stylist_id %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
